@@ -19,11 +19,12 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.UUID;
+import org.springframework.hateoas.RepresentationModel;
 
 @JsonInclude(Include.NON_NULL)
 @Entity
 @Table(name = "TB_USERS")
-public class UserModel implements Serializable {
+public class UserModel extends RepresentationModel<UserModel> implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
