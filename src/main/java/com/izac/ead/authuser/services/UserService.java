@@ -5,10 +5,14 @@ import com.izac.ead.authuser.models.UserModel;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface UserService {
 
     List<UserModel> findAll();
+
+    Page<UserModel> findAll(Pageable pageable);
 
     Optional<UserModel> findById(UUID userId);
 
